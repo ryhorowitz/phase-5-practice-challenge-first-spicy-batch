@@ -51,7 +51,7 @@ describe '#first_spicy_batch' do
     # This checks that the first_spicy_batch method completes execution in 5 seconds or less
     expect { Timeout.timeout(5) { first_spicy_batch(FIXNUM_MAX) } }.not_to(
       raise_error(Timeout::Error),
-      'Time limit exceeded',
+      'Time limit exceeded'
     )
 
     expect(first_spicy_batch(FIXNUM_MAX)).to eq(FIXNUM_MAX)
